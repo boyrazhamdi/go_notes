@@ -31,4 +31,7 @@ func main() {
 	// input, _ := reader.ReadString('\n') //  \n means, when you entered, func catch the text.
 	// fmt.Println(input)
 
+	// deneme
+	fmt.Println(input)
+
 }
