@@ -113,7 +113,5 @@ func main() {
 		for i, j := range v {
 			fmt.Println("\t", i+1, j)
 		}
-
 	}
-
 }
