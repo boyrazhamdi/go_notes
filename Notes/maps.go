@@ -96,4 +96,24 @@ func main() {
 		fmt.Println(k, customers[k])
 	}
 
+	// Another example map with slice and for loop
+	cities := map[string][]string{
+		"Turkey":  []string{"Ankara", "Istanbul", "Izmir"},
+		"Germany": []string{"Berlin", "Hamburg", "Stuttgart"},
+		"England": []string{"Londra", "Manchester", "Liverpool"},
+	}
+
+	fmt.Println(cities)
+	fmt.Println(cities["England"])
+	fmt.Println(cities["England"][1])
+
+	for k, v := range cities {
+		fmt.Println("Country: ", k)
+		fmt.Println("Cities")
+		for i, j := range v {
+			fmt.Println("\t", i+1, j)
+		}
+
+	}
+
 }
