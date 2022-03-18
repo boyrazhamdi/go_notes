@@ -102,6 +102,7 @@ func main() {
 		"Germany": []string{"Berlin", "Hamburg", "Stuttgart"},
 		"England": []string{"Londra", "Manchester", "Liverpool"},
 	}
+	//https://stackoverflow.com/questions/46707166/anonymous-struct-difference-between-struct-and
 
 	fmt.Println(cities)
 	fmt.Println(cities["England"])
