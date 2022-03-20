@@ -5,9 +5,10 @@ import "fmt"
 func main() {
 
 	// Struct
+	// Struct is an underlying type.
 	// Pass-by-value
 	// Generally we define this type of variables outside of main func.
-	var employee1 struct {
+	var employee1 struct { // Here, employee1 is a defined type or named type.
 		id        int
 		name      string
 		age       int
@@ -177,5 +178,28 @@ func main() {
 	}
 
 	fmt.Println(anonymousNewCar)
+
+	// Data type in type
+	type mile float64
+	type mystr string
+
+	var m1 mile
+	m1 = 4.7
+
+	fmt.Printf("%T, %v\n", m1, m1) // type is mile (not float64)
+	var f1 float64
+	f1 = 5.3
+	fmt.Printf("%T, %v\n", f1, f1)
+	//fmt.Println(m1 + f1) // type error: mile type + float64 type
+	//We can do type conversions
+	fmt.Println(m1 + mile(f1))
+	fmt.Println(float64(m1) + f1)
+
+	// Shorthand declaration
+	m2 := mile(4.6)
+	fmt.Println(m2)
+
+	/*Is Go an object-oriented language?
+	Yes and no. Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy. The concept of “interface” in Go provides a different approach that we believe is easy to use and in some ways more general. There are also ways to embed types in other types to provide something analogous—but not identical—to subclassing. Moreover, methods in Go are more general than in C++ or Java: they can be defined for any sort of data, even built-in types such as plain, “unboxed” integers. They are not restricted to structs (classes).*/
 
 }
