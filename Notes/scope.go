@@ -34,3 +34,6 @@ func printsVar() {
 
 	fmt.Println(variable4)
 }
+
+
+// Soru: genel kapsamda değişken tanımlamadan bir fonksiyonun diğer fonksiyondaki değişkeni görmesini nasıl sağlarız?
